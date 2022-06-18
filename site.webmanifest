@@ -1,0 +1,12 @@
+{
+    "short_name": "SitePS",
+    "name": "PitanzaSalvatore Site",
+    "icons": [{
+      "src": "./images/logo.jpeg",
+      "type": "image/png",
+      "sizes": "192x192"
+    }],
+    "theme_color": "white",
+    "display": "fullscreen"
+  }
+  

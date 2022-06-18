@@ -1,0 +1,284 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+
+main {
+  padding-top: 50px;
+}
+
+/* header */
+header {
+  background-color: rgb(33, 37, 41);
+}
+
+.font-size {
+  font-size: 15px;
+}
+
+.a-nav {
+  font-size: smaller;
+}
+
+.a-nav:hover {
+  box-shadow: gray 0 2px 0 0;
+}
+
+#navbarNav {
+  margin-right: 250px;
+}
+
+.text-a,
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* JUMBOTRON */
+#jumbotron {
+  background-image: url("images/photo-1635830625698-3b9bd74671ca.avif");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  padding: 50px 0;
+  height: 100vh;
+}
+
+#jumbotron::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.568);
+}
+
+.z-i {
+  z-index: 1;
+}
+
+.arrow-icon {
+  margin-top: 20px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  50% {
+    transform: scale(0.9, 1.1) translateY(-20px);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+/* CHI SONO */
+#biograpy {
+  background-image: url("/images/IMG_20210314_104826.jpg");
+  height: 90vh;
+  padding-top: 70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: 0.8s;
+  filter: brightness(1.1);
+  position: relative;
+  color: white;
+}
+
+#biograpy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.521);
+}
+
+#biograpy:hover {
+  filter: brightness(1.4);
+}
+
+.z-i {
+  z-index: 100;
+}
+
+#biograpy p {
+  text-align: justify;
+  font-size: 20px;
+}
+
+/* COMPETENZE */
+#competenze {
+  height: 100vh;
+  background: radial-gradient(#594c66, #000000);
+  color: white;
+  padding: 50px 0;
+}
+
+p {
+  text-align: justify;
+}
+
+.fs {
+  font-size: 15px;
+}
+
+.icon-code {
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.icon-code:hover {
+  transform: scale(1.5);
+}
+
+/* MIEI LAVORI */
+#miei-lavori {
+  position: relative;
+  padding: 70px 0;
+  background-size: cover;
+}
+
+.img-absolute-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.carousel {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: black -17px 17px 15px -15px;
+}
+
+.text-card {
+  background-color: #242d34;
+  color: white;
+  /* font-weight: bold; */
+}
+
+/* card project */
+.card {
+  transition: 0.3s linear;
+  box-shadow: 0 0 30px 0 gray;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* CVITAE */
+#cvitae {
+  padding: 20px 0;
+}
+
+.img-cv {
+  transition: 0.4s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+  box-shadow: grey 0px 0px 15px 0px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#cv-prev.active-prev {
+  transform: scale(3.5) translate(-4%);
+  box-shadow: 0px 0px 25px 0px black;
+  z-index: 10000;
+}
+
+#cv-next.active-next {
+  transform: scale(3.5) translate(-40%);
+  box-shadow: 0px 0px 25px 0px black;
+  z-index: 10000;
+}
+
+/* SEGUIMI */
+#seguimi{
+  background: linear-gradient(to top, #232730 50%, white 0%);
+}
+.card-follow {
+  width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: black -5px 5px 30px -10px;
+  border: solid 1px lightgray;
+  margin: 0 10px;
+}
+
+
+footer {
+  background-color: #232730;
+  height: 150px;
+}
+
+footer span {
+  font-size: 13px;
+}
+
+#up {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  z-index: 100;
+  transition:  opacity 0.5s, transform 0.5s;
+  opacity: 0;
+}
+
+#up i{
+  filter: drop-shadow(0 0 15px white);
+}
+
+#up.show {
+  opacity: 1;
+  transform: translateY(-30px);
+}
+
+.link-up,
+.arror-up {
+  color: #231d42;
+}
+
+
+
+/* smartphone */
+@media screen and (max-width: 800px) {
+  #chi-sono {
+    padding: 20px 0;
+  }
+
+  .img-bl {
+    display: none;
+  }
+
+  .icon-code {
+    transition: 0;
+    cursor: pointer;
+  }
+
+  .icon-code:hover {
+    margin-bottom: 0;
+    transition: 0;
+  }
+
+  #competenze {
+    height: auto;
+  }
+}
